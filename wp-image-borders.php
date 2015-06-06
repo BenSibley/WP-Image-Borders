@@ -30,10 +30,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Add settings link on plugin page
-function bs_wib_settings_link($links) { 
-  $settings_link = '<a href="options-general.php?page=wp-image-borders.php">Settings</a>'; 
-  array_unshift($links, $settings_link); 
-  return $links; 
+function bs_wib_settings_link($links) {
+
+	// set url
+	$link = admin_url('options-general.php?page=wp-image-borders.php');
+
+	// set link markup
+	$settings_link = '<a href="' . esc_url( $link ) . '">Settings</a>';
+
+	// add settings link to plugin's links
+	array_unshift($links, $settings_link);
+
+	// return the links
+	return $links;
 }
 
 $plugin = plugin_basename(__FILE__); 
