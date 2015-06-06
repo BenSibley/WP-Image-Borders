@@ -135,7 +135,7 @@ function bs_wib_admin_init() {
     // this field lets users add classes
     add_settings_field(
         'bs_wib_classes', // string used for 'id' in attribute tags
-        'Add specific CSS classes here', // Title of the field
+        'Additional CSS classes', // Title of the field
         'bs_wib_classes_display', // callback that creates the input field
         'wp-image-borders', // $page ($menu_slug used in add_options_page)
         'bs_wib_main' // the section the field is placed in (the id from add_settings_section above)
@@ -239,7 +239,9 @@ function bs_wib_post_checkbox_display() {
 // adds text input for entering classes to add borders to
 function bs_wib_classes_display() {
     $options = get_option( 'wp_image_borders_options' );
-    $html = "<input type='text' id='bs_wib_classes' name='wp_image_borders_options[bs_wib_classes]' value='{$options['bs_wib_classes']}' />";  
+    $html = "<input type='text' id='bs_wib_classes' name='wp_image_borders_options[bs_wib_classes]' value='{$options['bs_wib_classes']}' />";
+	$html .= '<span style="margin-left: 12px;"><em>.class-1, .class-2, .another-class</em></span>';
+	$html .= '<p style="margin-top: 12px;">Classes should be on the img element.</p>';
     echo $html;
 }
 
