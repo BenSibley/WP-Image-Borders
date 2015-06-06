@@ -16,28 +16,28 @@ function bs_wib_admin_init() {
 	// this section contains remove checkbox
 	add_settings_section(
 		'bs_wib_main', // string used in 'id' attribute of tags
-		'Target Images', // title of the section
+		__('Target Images', 'bs-wib'), // title of the section
 		'bs_wib_section_text', // callback that will echo content
 		'wp-image-borders' // $page ($menu_slug used in add_options_page)
 	);
 	// this section contains the custom border options
 	add_settings_section(
 		'bs_wib_border_styles', // string used in 'id' attribute of tags
-		'Customize Image Borders', // title of the section
+		__('Customize Image Borders', 'bs-wib'), // title of the section
 		'bs_wib_borders_section_text', // callback that will echo content
 		'wp-image-borders' // $page ($menu_slug used in add_options_page)
 	);
 	// this section contains the box shadow options
 	add_settings_section(
 		'bs_wib_box_shadows', // string used in 'id' attribute of tags
-		'Add Drop Shadows to Images', // title of the section
+		__('Add Drop Shadows to Images', 'bs-wib'), // title of the section
 		'bs_wib_shadow_section_text', // callback that will echo content
 		'wp-image-borders' // $page ($menu_slug used in add_options_page)
 	);
 	// this field lets users add classes
 	add_settings_field(
 		'bs_wib_post_checkbox', // string used for 'id' in attribute tags
-		'Add borders to all images in blog posts', // Title of the field
+		__('Add borders to all images in blog posts', 'bs-wib'), // Title of the field
 		'bs_wib_post_checkbox_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_main' // the section the field is placed in (the id from add_settings_section above)
@@ -45,7 +45,7 @@ function bs_wib_admin_init() {
 	// this field lets users add classes
 	add_settings_field(
 		'bs_wib_classes', // string used for 'id' in attribute tags
-		'Additional CSS classes', // Title of the field
+		__('Additional CSS classes', 'bs-wib'), // Title of the field
 		'bs_wib_classes_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_main' // the section the field is placed in (the id from add_settings_section above)
@@ -54,7 +54,7 @@ function bs_wib_admin_init() {
 	// this field adds the style input for the custom border options
 	add_settings_field(
 		'bs_wib_border_style', // string used for 'id' in attribute tags
-		'Border Style:', // Title of the field
+		__('Border Style:', 'bs-wib'), // Title of the field
 		'bs_wib_border_style_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_border_styles' // the section the field is placed in (the id from add_settings_section above)
@@ -62,7 +62,7 @@ function bs_wib_admin_init() {
 	// this field adds the width input for the custom border options
 	add_settings_field(
 		'bs_wib_border_width', // string used for 'id' in attribute tags
-		'Border Width (in pixels):', // Title of the field
+		__('Border Width (in pixels):', 'bs-wib'), // Title of the field
 		'bs_wib_border_width_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_border_styles' // the section the field is placed in (the id from add_settings_section above)
@@ -70,7 +70,7 @@ function bs_wib_admin_init() {
 	// this field adds the border radius input for the custom border options
 	add_settings_field(
 		'bs_wib_border_radius', // string used for 'id' in attribute tags
-		'Border Radius (in pixels):', // Title of the field
+		__('Border Radius (in pixels):', 'bs-wib'), // Title of the field
 		'bs_wib_border_radius_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_border_styles' // the section the field is placed in (the id from add_settings_section above)
@@ -78,7 +78,7 @@ function bs_wib_admin_init() {
 	// this field adds the color input for the custom border options
 	add_settings_field(
 		'bs_wib_border_color', // string used for 'id' in attribute tags
-		'Border Color:', // Title of the field
+		__('Border Color:', 'bs-wib'), // Title of the field
 		'bs_wib_border_color_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_border_styles' // the section the field is placed in (the id from add_settings_section above)
@@ -87,35 +87,35 @@ function bs_wib_admin_init() {
 	// this field adds the drop shadow options for the custom border options
 	add_settings_field(
 		'bs_wib_box_shadow_horizontal', // string used for 'id' in attribute tags
-		'Horizontal Distance:', // Title of the field
+		__('Horizontal Distance:', 'bs-wib'), // Title of the field
 		'bs_wib_box_shadow_horizontal_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_box_shadows' // the section the field is placed in (the id from add_settings_section above)
 	);
 	add_settings_field(
 		'bs_wib_box_shadow_vertical', // string used for 'id' in attribute tags
-		'Vertical Distance:', // Title of the field
+		__('Vertical Distance:', 'bs-wib'), // Title of the field
 		'bs_wib_box_shadow_vertical_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_box_shadows' // the section the field is placed in (the id from add_settings_section above)
 	);
 	add_settings_field(
 		'bs_wib_box_shadow_blur', // string used for 'id' in attribute tags
-		'Blur Radius:', // Title of the field
+		__('Blur Radius:', 'bs-wib'), // Title of the field
 		'bs_wib_box_shadow_blur_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_box_shadows' // the section the field is placed in (the id from add_settings_section above)
 	);
 	add_settings_field(
 		'bs_wib_box_shadow_spread', // string used for 'id' in attribute tags
-		'Spread Radius:', // Title of the field
+		__('Spread Radius:', 'bs-wib'), // Title of the field
 		'bs_wib_box_shadow_spread_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_box_shadows' // the section the field is placed in (the id from add_settings_section above)
 	);
 	add_settings_field(
 		'bs_wib_box_shadow_color', // string used for 'id' in attribute tags
-		'Box Shadow Color:', // Title of the field
+		__('Box Shadow Color:', 'bs-wib'), // Title of the field
 		'bs_wib_box_shadow_color_display', // callback that creates the input field
 		'wp-image-borders', // $page ($menu_slug used in add_options_page)
 		'bs_wib_box_shadows' // the section the field is placed in (the id from add_settings_section above)
@@ -124,17 +124,17 @@ function bs_wib_admin_init() {
 
 // Adds text to remove borders section
 function bs_wib_section_text() {
-	echo '<p>Use this section to target the images you want to add borders to.</p>';
+	echo '<p>' . __("Use this section to target the images you want to add borders to.", "bs-wib") . '</p>';
 }
 
 // Adds text to border styles section
 function bs_wib_borders_section_text() {
-	echo '<p>Use this section to style your image borders.</p>';
+	echo '<p>' . __("Use this section to style your image borders.", "bs-wib") . '</p>';
 }
 
 // Adds text to box shadow section
 function bs_wib_shadow_section_text() {
-	echo '<p>Use this section to add drop shadows to your images.</p>';
+	echo '<p>' . __("Use this section to add drop shadows to your images.", "bs-wib") . '</p>';
 }
 
 // adds checkbox to add borders to all images in post
@@ -151,7 +151,7 @@ function bs_wib_classes_display() {
 	$options = get_option( 'wp_image_borders_options' );
 	$html = "<input type='text' id='bs_wib_classes' name='wp_image_borders_options[bs_wib_classes]' value='{$options['bs_wib_classes']}' />";
 	$html .= '<span style="margin-left: 12px;"><em>.class-1, .class-2, .another-class</em></span>';
-	$html .= '<p style="margin-top: 12px;">Classes should be on the img element.</p>';
+	$html .= '<p style="margin-top: 12px;">' . __("Classes should be on the img element.", "bs-wib") . '</p>';
 	echo $html;
 }
 
