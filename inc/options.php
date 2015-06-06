@@ -1,5 +1,8 @@
 <?php
 
+// prevent direct access
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // register settings
 add_action( 'admin_init', 'bs_wib_admin_init');
 
@@ -249,4 +252,28 @@ function bs_wib_box_shadow_color_display() {
 	$options = get_option( 'wp_image_borders_options' );
 	$html = "<input id='bs_wib_box_shadow_color' name='wp_image_borders_options[bs_wib_box_shadow_color]' type='text' value='{$options['bs_wib_box_shadow_color']}' class='my-color-field' data-default-color='#000000' />";
 	echo $html;
+}
+
+// sanitizes the inputs from the options pages and outputs clean data
+// ONLY does one checkbox right now
+function bs_wib_validation( $input ) {
+
+	// Create our array for storing the validated options
+	$output = array();
+
+	// Loop through each of the incoming options
+	foreach( $input as $key => $value ) {
+
+		// Check to see if the current option has a value. If so, process it.
+		if( isset( $input[$key] ) ) {
+
+			// Strip all HTML and PHP tags and properly handle quoted strings
+			$output[$key] = strip_tags( stripslashes( $input[$key] ) );
+
+		} // end if
+
+	} // end foreach
+
+	// Return the array processing any additional functions filtered by this action
+	return apply_filters( 'bs_wib_validation', $output, $input );
 }
