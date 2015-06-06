@@ -26,6 +26,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+// prevent direct access
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Add settings link on plugin page
 function bs_wib_settings_link($links) { 
   $settings_link = '<a href="options-general.php?page=wp-image-borders.php">Settings</a>'; 
