@@ -342,42 +342,6 @@ function bs_wib_box_shadow_color_display() {
     echo $html;
 }
 
-// get the classes from the optional class input and return them in a comma delimited list with img selectors
-//function bs_wib_get_classes() {
-//
-//    // access the plugin options
-//	$options = get_option( 'wp_image_borders_options' );
-//
-//    // if the classes section exists
-//	if($options['bs_wib_classes']) {
-//
-//        // create a comma delimited list from the array
-//		$classes = explode(",", $options['bs_wib_classes']);
-//
-//        // if the add to all post images box is checked, add the wp-image-borders class
-//        if ( 1 == $options['bs_wib_post_checkbox'] ) {
-//            $classes[] = " .wp-image-borders";
-//        }
-//
-//        // there were classes, add an 'img' selector after each
-//		if($classes) {
-//			foreach($classes as $class) {
-//				$selectors[] = "$class img";
-//			}
-//		}
-//		return $selectors;
-//	}
-//    // if there are not classes, but the checkbox is checked then return just the wp-image-borders selector
-//    elseif ( !empty($options['bs_wib_post_checkbox']) ) {
-//
-//        if(1 == $options['bs_wib_post_checkbox'] ){
-//            $selectors[] = ".wp-image-borders img";
-//
-//            return $selectors;
-//        }
-//    }
-//}
-
 // add the wp-image-borders class to the post container if the post_checkbox is checked
 function bs_wib_add_post_class($classes) {
 
@@ -397,62 +361,55 @@ function bs_wib_output_styles() {
     // access plugin options
     $options = get_option( 'wp_image_borders_options' );
 
-    // get the classes from the function that created a comma delimited list and added 'img' selectors
-//	$selectors = bs_wib_get_classes();
-
     // create $css variable
     $css = '';
 
-    // if there are any selectors available...
-//	if($selectors) {
+	// access the plugin options
+	$options = get_option( 'wp_image_borders_options' );
 
-        wp_enqueue_style( 'wp-image-borders-styles', plugins_url( 'wp-image-borders.css' , __FILE__ ) );
+	// if the classes section isn't empty
+	if( $options['bs_wib_classes'] ) {
 
-        // get the number of selectors available
-//		$class_count = count($selectors);
-//
-//        // output each class with a comma except for the last (no comma)
-//		for ( $counter = 0; $counter < $class_count; $counter += 1) {
-//			if($class_count > $counter + 1) {
-//				$css .= "$selectors[$counter],";
-//			} else {
-//				$css .= $selectors[$counter];
-//			}
-//		}
-        // append the user-generated styles to the class selectors
+		// create a comma delimited list from the array
+		$classes = explode( ",", $options['bs_wib_classes'] );
 
-		// add all the selectors need to precisely select all images
-		$css .= '
-			.wp-image-borders .alignright,
-			.wp-image-borders .alignleft,
-			.wp-image-borders .aligncenter,
-			.wp-image-borders .alignnone,
-			.wp-image-borders .size-auto,
-			.wp-image-borders .size-full,
-			.wp-image-borders .size-large,
-			.wp-image-borders .size-medium,
-			.wp-image-borders .size-thumbnail,
-			.wp-image-borders .alignright img,
-			.wp-image-borders .alignleft img,
-			.wp-image-borders .aligncenter img,
-			.wp-image-borders .alignnone img,
-			.wp-image-borders .size-auto img,
-			.wp-image-borders .size-full img,
-			.wp-image-borders .size-large img,
-			.wp-image-borders .size-medium img,
-			.wp-image-borders .size-thumbnail img';
-		$css .= ' { 
-			   border-style: ' . $options["bs_wib_border_style"] . ' !important; 
-			   border-width: ' . $options["bs_wib_border_width"] . 'px !important; 
-			   border-radius: ' . $options["bs_wib_border_radius"] . 'px !important;
-			   border-color: ' . $options["bs_wib_border_color"] . ' !important; 
-			   -moz-box-shadow: ' . $options["bs_wib_box_shadow_horizontal"] . 'px ' . $options["bs_wib_box_shadow_vertical"] . 'px ' . $options["bs_wib_box_shadow_blur"] . 'px ' . $options["bs_wib_box_shadow_spread"] . 'px ' . $options["bs_wib_box_shadow_color"] . ' !important; 
-			   -webkit-box-shadow: ' . $options["bs_wib_box_shadow_horizontal"] . 'px ' . $options["bs_wib_box_shadow_vertical"] . 'px ' . $options["bs_wib_box_shadow_blur"] . 'px ' . $options["bs_wib_box_shadow_spread"] . 'px ' . $options["bs_wib_box_shadow_color"] . ' !important; 
-			   box-shadow: ' . $options["bs_wib_box_shadow_horizontal"] . 'px ' . $options["bs_wib_box_shadow_vertical"] . 'px ' . $options["bs_wib_box_shadow_blur"] . 'px ' . $options["bs_wib_box_shadow_spread"] . 'px ' . $options["bs_wib_box_shadow_color"] . ' !important; 
-			   }';
-			   
-    	wp_add_inline_style('wp-image-borders-styles',$css);
-//    }
+		// add the classes to the beginning of the output
+		$css .= $classes . ',';
+	}
+
+    wp_enqueue_style( 'wp-image-borders-styles', plugins_url( 'wp-image-borders.css' , __FILE__ ) );
+
+	// add all the selectors need to precisely select all images
+	$css .= '
+		.wp-image-borders .alignright,
+		.wp-image-borders .alignleft,
+		.wp-image-borders .aligncenter,
+		.wp-image-borders .alignnone,
+		.wp-image-borders .size-auto,
+		.wp-image-borders .size-full,
+		.wp-image-borders .size-large,
+		.wp-image-borders .size-medium,
+		.wp-image-borders .size-thumbnail,
+		.wp-image-borders .alignright img,
+		.wp-image-borders .alignleft img,
+		.wp-image-borders .aligncenter img,
+		.wp-image-borders .alignnone img,
+		.wp-image-borders .size-auto img,
+		.wp-image-borders .size-full img,
+		.wp-image-borders .size-large img,
+		.wp-image-borders .size-medium img,
+		.wp-image-borders .size-thumbnail img';
+	$css .= ' {
+	   border-style: ' . $options["bs_wib_border_style"] . ' !important;
+	   border-width: ' . $options["bs_wib_border_width"] . 'px !important;
+	   border-radius: ' . $options["bs_wib_border_radius"] . 'px !important;
+	   border-color: ' . $options["bs_wib_border_color"] . ' !important;
+	   -moz-box-shadow: ' . $options["bs_wib_box_shadow_horizontal"] . 'px ' . $options["bs_wib_box_shadow_vertical"] . 'px ' . $options["bs_wib_box_shadow_blur"] . 'px ' . $options["bs_wib_box_shadow_spread"] . 'px ' . $options["bs_wib_box_shadow_color"] . ' !important;
+	   -webkit-box-shadow: ' . $options["bs_wib_box_shadow_horizontal"] . 'px ' . $options["bs_wib_box_shadow_vertical"] . 'px ' . $options["bs_wib_box_shadow_blur"] . 'px ' . $options["bs_wib_box_shadow_spread"] . 'px ' . $options["bs_wib_box_shadow_color"] . ' !important;
+	   box-shadow: ' . $options["bs_wib_box_shadow_horizontal"] . 'px ' . $options["bs_wib_box_shadow_vertical"] . 'px ' . $options["bs_wib_box_shadow_blur"] . 'px ' . $options["bs_wib_box_shadow_spread"] . 'px ' . $options["bs_wib_box_shadow_color"] . ' !important;
+   }';
+
+    wp_add_inline_style('wp-image-borders-styles',$css);
 }
 add_action('wp_enqueue_scripts','bs_wib_output_styles');
 
