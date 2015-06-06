@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b35ed0-e6fd-4d2b-86a3-07bfcd69dfcd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inc/options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inc/output.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/options.php" afterPath="$PROJECT_DIR$/inc/options.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-image-borders.php" afterPath="$PROJECT_DIR$/wp-image-borders.php" />
     </list>
     <ignored path="wp-image-borders.iws" />
@@ -29,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="wp-image-borders.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wp-image-borders.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-image-borders.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5325265" vertical-offset="792" max-vertical-offset="4356">
-              <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+            <state vertical-scroll-proportion="-30.73585" vertical-offset="483" max-vertical-offset="2266">
+              <caret line="96" column="1" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
               <folding>
                 <element signature="e#6#1089#0#PHP" expanded="true" />
               </folding>
@@ -44,12 +44,22 @@
       <file leaf-file-name="options.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.84615386" vertical-offset="0" max-vertical-offset="5654">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.3846154" vertical-offset="0" max-vertical-offset="6248">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
-                <marker date="1433626094000" expanded="true" signature="7315:7333" placeholder="..." />
-                <marker date="1433626094000" expanded="true" signature="7409:7426" placeholder="..." />
+                <marker date="1433626171000" expanded="true" signature="7377:7395" placeholder="..." />
+                <marker date="1433626171000" expanded="true" signature="7471:7488" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inc/output.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.93604654" vertical-offset="940" max-vertical-offset="1716">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,6 +79,7 @@
       <list>
         <option value="$PROJECT_DIR$/inc/options.php" />
         <option value="$PROJECT_DIR$/wp-image-borders.php" />
+        <option value="$PROJECT_DIR$/inc/output.php" />
       </list>
     </option>
   </component>
@@ -197,10 +208,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="204" y="-1051" width="1332" height="1022" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20215054" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20215054" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -479,22 +490,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.84615386" vertical-offset="0" max-vertical-offset="5654">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.3846154" vertical-offset="0" max-vertical-offset="6248">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <marker date="1433626094000" expanded="true" signature="7315:7333" placeholder="..." />
-            <marker date="1433626094000" expanded="true" signature="7409:7426" placeholder="..." />
+            <marker date="1433626171000" expanded="true" signature="7377:7395" placeholder="..." />
+            <marker date="1433626171000" expanded="true" signature="7471:7488" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-image-borders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5325265" vertical-offset="792" max-vertical-offset="4356">
-          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        <state vertical-scroll-proportion="-30.73585" vertical-offset="483" max-vertical-offset="2266">
+          <caret line="96" column="1" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93604654" vertical-offset="940" max-vertical-offset="1716">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

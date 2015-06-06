@@ -5,7 +5,8 @@ Version: 1.5.3
 Description: WP Image Borders makes it easy to add or remove image borders from pictures in your blog posts.
 Author: Compete Themes
 Author URI: https://www.competethemes.com
-License: GPLv2
+Text Domain: bs-wib
+Domain Path: /languages
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,8 +73,8 @@ add_filter("plugin_action_links_wp-image-borders/wp-image-borders.php", 'bs_wib_
 // add menu
 function bs_wib_add_page() {
     add_options_page( 
-        'WP Image Borders Options', // Page Title
-        'WP Image Borders', // Title of Menu
+        __('WP Image Borders Options', 'bs-wib'), // Page Title
+	    __('WP Image Borders', 'bs-wib'), // Title of Menu
         'manage_options', // capability level
         'wp-image-borders', // Menu slug
         'wp_image_borders_options_content' // callback function
@@ -86,13 +87,16 @@ function wp_image_borders_options_content() {
     ?>
     <div class="wrap">
         <?php screen_icon( 'themes' ); ?>
-        <h2>WP Image Borders Options</h2>
+        <h2><?php __('WP Image Borders Options', 'bs-wib'); ?></h2>
         <form action="options.php" method="post">
             <?php settings_fields( 'wp_image_borders_options' ); ?>
             <?php do_settings_sections( 'wp-image-borders' ); ?>
-            <input class="button-primary" name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes' ); ?>" />
+            <input class="button-primary" name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bs-wib' ); ?>" />
         </form>
-        <p>If you liked this plugin, please take <a href="http://wordpress.org/support/view/plugin-reviews/wp-image-borders">1 minute to leave a review</a>.</p>
+        <p><?php
+			$link = 'http://wordpress.org/support/view/plugin-reviews/wp-image-borders';
+			printf( __('If you liked this plugin, please take <a href="%s">1 minute to leave a review</a>.', 'bs-wib'), $link ); ?>
+        </p>
     </div><?php 
 }
 ?>
