@@ -29,6 +29,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // prevent direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+// set constant for main plugin file
+if ( ! defined( 'BS_WIB_FILE' ) ) {
+	define( 'BS_WIB_PRO_FILE', __FILE__ );
+}
+
+// set constant for plugin directory
+if ( ! defined( 'BS_WIB_PRO_PATH' ) ) {
+	define( 'BS_WIB_PRO_PATH', plugin_dir_path( BS_WIB_PRO_FILE ) );
+}
+
+// set constant for plugin url
+if ( ! defined( 'BS_WIB_PRO_URL' ) ) {
+	define( 'BS_WIB_PRO_URL', plugin_dir_url( __FILE__ ) );
+}
+
+// set constant for plugin basename
+if ( ! defined( 'BS_WIB_PRO_BASENAME' ) ) {
+	define( 'BS_WIB_PRO_BASENAME', plugin_basename( BS_WIB_PRO_FILE ) );
+}
+
 // Add settings link on plugin page
 function bs_wib_settings_link($links) {
 
