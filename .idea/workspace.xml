@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b35ed0-e6fd-4d2b-86a3-07bfcd69dfcd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inc/options.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-image-borders.php" afterPath="$PROJECT_DIR$/wp-image-borders.php" />
     </list>
     <ignored path="wp-image-borders.iws" />
@@ -30,12 +32,23 @@
       <file leaf-file-name="wp-image-borders.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-image-borders.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46596065" vertical-offset="5038" max-vertical-offset="9768">
-              <caret line="243" column="41" selection-start-line="243" selection-start-column="41" selection-end-line="243" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.5325265" vertical-offset="792" max-vertical-offset="4356">
+              <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
               <folding>
                 <element signature="e#6#1089#0#PHP" expanded="true" />
-                <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-                <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="options.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/options.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.84615386" vertical-offset="0" max-vertical-offset="5654">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1433626094000" expanded="true" signature="7315:7333" placeholder="..." />
+                <marker date="1433626094000" expanded="true" signature="7409:7426" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -54,6 +67,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/inc/options.php" />
         <option value="$PROJECT_DIR$/wp-image-borders.php" />
       </list>
     </option>
@@ -112,6 +126,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-image-borders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-image-borders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -140,6 +168,13 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
@@ -212,8 +247,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -240,8 +273,6 @@
           <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -268,8 +299,6 @@
           <caret line="27" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -296,8 +325,6 @@
           <caret line="10" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -324,8 +351,6 @@
           <caret line="408" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -352,8 +377,6 @@
           <caret line="193" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -372,8 +395,6 @@
           <caret line="193" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -392,8 +413,6 @@
           <caret line="193" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -412,8 +431,6 @@
           <caret line="100" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -432,8 +449,6 @@
           <caret line="377" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -462,14 +477,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inc/options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.84615386" vertical-offset="0" max-vertical-offset="5654">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1433626094000" expanded="true" signature="7315:7333" placeholder="..." />
+            <marker date="1433626094000" expanded="true" signature="7409:7426" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-image-borders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46596065" vertical-offset="5038" max-vertical-offset="9768">
-          <caret line="243" column="41" selection-start-line="243" selection-start-column="41" selection-end-line="243" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.5325265" vertical-offset="792" max-vertical-offset="4356">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
           <folding>
             <element signature="e#6#1089#0#PHP" expanded="true" />
-            <marker date="1433625888000" expanded="true" signature="11139:11157" placeholder="..." />
-            <marker date="1433625888000" expanded="true" signature="11233:11250" placeholder="..." />
           </folding>
         </state>
       </provider>
