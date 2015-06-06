@@ -370,11 +370,8 @@ function bs_wib_output_styles() {
 	// if the classes section isn't empty
 	if( $options['bs_wib_classes'] ) {
 
-		// create a comma delimited list from the array
-		$classes = explode( ",", $options['bs_wib_classes'] );
-
 		// add the classes to the beginning of the output
-		$css .= $classes . ',';
+		$css .= $options['bs_wib_classes'] . ',';
 	}
 
     wp_enqueue_style( 'wp-image-borders-styles', plugins_url( 'wp-image-borders.css' , __FILE__ ) );
