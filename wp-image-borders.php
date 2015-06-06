@@ -64,14 +64,9 @@ function bs_wib_settings_link($links) {
 	// return the links
 	return $links;
 }
+add_filter("plugin_action_links_wp-image-borders/wp-image-borders.php", 'bs_wib_settings_link' );
 
-$plugin = plugin_basename(__FILE__); 
-add_filter("plugin_action_links_$plugin", 'bs_wib_settings_link' );
-
-// Hook into admin_menu to build my submenu
-add_action('admin_menu', 'bs_wib_add_page');
-
-// 
+// add menu
 function bs_wib_add_page() {
     add_options_page( 
         'WP Image Borders Options', // Page Title
@@ -81,6 +76,7 @@ function bs_wib_add_page() {
         'wp_image_borders_options' // callback function
     );
 }
+add_action('admin_menu', 'bs_wib_add_page');
 
 // creates content in options page and calls settings sections & fields
 function wp_image_borders_options() {
@@ -97,7 +93,7 @@ function wp_image_borders_options() {
     </div><?php 
 }
 
-// hook into the admin initialization
+// register settings
 add_action( 'admin_init', 'bs_wib_admin_init');
 
 //register setting and create the section and field
@@ -347,53 +343,50 @@ function bs_wib_box_shadow_color_display() {
 }
 
 // get the classes from the optional class input and return them in a comma delimited list with img selectors
-function bs_wib_get_classes() {
-
-    // access the plugin options
-	$options = get_option( 'wp_image_borders_options' );
-
-    // if the classes section exists
-	if($options['bs_wib_classes']) {
-
-        // create a comma delimited list from the array
-		$classes = explode(",", $options['bs_wib_classes']);
-
-        // if the add to all post images box is checked, add the wp-image-borders class
-        if ( !empty($options['bs_wib_post_checkbox']) ) {
-            if ( 1 == $options['bs_wib_post_checkbox'] ) {
-                $classes[] = " .wp-image-borders";
-            }
-        }
-
-        // there were classes, add an 'img' selector after each
-		if($classes) {
-			foreach($classes as $class) {
-				$selectors[] = "$class img";
-			}
-		}
-		return $selectors;
-	}
-    // if there are not classes, but the checkbox is checked then return just the wp-image-borders selector
-    elseif ( !empty($options['bs_wib_post_checkbox']) ) {
-
-        if(1 == $options['bs_wib_post_checkbox'] ){
-            $selectors[] = ".wp-image-borders img";
-
-            return $selectors;
-        }
-    }
-}
+//function bs_wib_get_classes() {
+//
+//    // access the plugin options
+//	$options = get_option( 'wp_image_borders_options' );
+//
+//    // if the classes section exists
+//	if($options['bs_wib_classes']) {
+//
+//        // create a comma delimited list from the array
+//		$classes = explode(",", $options['bs_wib_classes']);
+//
+//        // if the add to all post images box is checked, add the wp-image-borders class
+//        if ( 1 == $options['bs_wib_post_checkbox'] ) {
+//            $classes[] = " .wp-image-borders";
+//        }
+//
+//        // there were classes, add an 'img' selector after each
+//		if($classes) {
+//			foreach($classes as $class) {
+//				$selectors[] = "$class img";
+//			}
+//		}
+//		return $selectors;
+//	}
+//    // if there are not classes, but the checkbox is checked then return just the wp-image-borders selector
+//    elseif ( !empty($options['bs_wib_post_checkbox']) ) {
+//
+//        if(1 == $options['bs_wib_post_checkbox'] ){
+//            $selectors[] = ".wp-image-borders img";
+//
+//            return $selectors;
+//        }
+//    }
+//}
 
 // add the wp-image-borders class to the post container if the post_checkbox is checked
 function bs_wib_add_post_class($classes) {
+
     // access the plugin options
     $options = get_option( 'wp_image_borders_options' );
 
     // if the checkbox is not empty and is checked, add the wp-image-borders class
-    if ( !empty($options['bs_wib_post_checkbox']) ) {
-        if ( 1 == $options['bs_wib_post_checkbox'] ) {
-            $classes[] = "wp-image-borders";
-        }
+    if ( 1 == $options['bs_wib_post_checkbox'] ) {
+        $classes[] = "wp-image-borders";
     }
     return $classes;
 }
@@ -405,30 +398,49 @@ function bs_wib_output_styles() {
     $options = get_option( 'wp_image_borders_options' );
 
     // get the classes from the function that created a comma delimited list and added 'img' selectors
-	$selectors = bs_wib_get_classes();
+//	$selectors = bs_wib_get_classes();
+
     // create $css variable
     $css = '';
 
     // if there are any selectors available...
-	if($selectors) {
+//	if($selectors) {
 
-        wp_enqueue_style(
-            'wp-image-borders-styles',
-            plugins_url( 'wp-image-borders.css' , __FILE__ )
-        );
+        wp_enqueue_style( 'wp-image-borders-styles', plugins_url( 'wp-image-borders.css' , __FILE__ ) );
 
         // get the number of selectors available
-		$class_count = count($selectors);
-
-        // output each class with a comma except for the last (no comma)
-		for ( $counter = 0; $counter < $class_count; $counter += 1) {
-			if($class_count > $counter + 1) {
-				$css .= "$selectors[$counter],";
-			} else {
-				$css .= $selectors[$counter];
-			}
-		}
+//		$class_count = count($selectors);
+//
+//        // output each class with a comma except for the last (no comma)
+//		for ( $counter = 0; $counter < $class_count; $counter += 1) {
+//			if($class_count > $counter + 1) {
+//				$css .= "$selectors[$counter],";
+//			} else {
+//				$css .= $selectors[$counter];
+//			}
+//		}
         // append the user-generated styles to the class selectors
+
+		// add all the selectors need to precisely select all images
+		$css .= '
+			.wp-image-borders .alignright,
+			.wp-image-borders .alignleft,
+			.wp-image-borders .aligncenter,
+			.wp-image-borders .alignnone,
+			.wp-image-borders .size-auto,
+			.wp-image-borders .size-full,
+			.wp-image-borders .size-large,
+			.wp-image-borders .size-medium,
+			.wp-image-borders .size-thumbnail,
+			.wp-image-borders .alignright img,
+			.wp-image-borders .alignleft img,
+			.wp-image-borders .aligncenter img,
+			.wp-image-borders .alignnone img,
+			.wp-image-borders .size-auto img,
+			.wp-image-borders .size-full img,
+			.wp-image-borders .size-large img,
+			.wp-image-borders .size-medium img,
+			.wp-image-borders .size-thumbnail img';
 		$css .= ' { 
 			   border-style: ' . $options["bs_wib_border_style"] . ' !important; 
 			   border-width: ' . $options["bs_wib_border_width"] . 'px !important; 
@@ -440,9 +452,8 @@ function bs_wib_output_styles() {
 			   }';
 			   
     	wp_add_inline_style('wp-image-borders-styles',$css);
-    }
+//    }
 }
-
 add_action('wp_enqueue_scripts','bs_wib_output_styles');
 
 // sanitizes the inputs from the options pages and outputs clean data
