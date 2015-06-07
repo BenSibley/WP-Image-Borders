@@ -91,12 +91,15 @@ function wp_image_borders_options_content() {
         <form action="options.php" method="post">
             <?php settings_fields( 'wp_image_borders_options' ); ?>
             <?php do_settings_sections( 'wp-image-borders' ); ?>
-            <input class="button-primary" name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bs-wib' ); ?>" />
+            <input style="margin: 24px 0;" class="button-primary" name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bs-wib' ); ?>" />
         </form>
         <p><?php
 			$link = 'http://wordpress.org/support/view/plugin-reviews/wp-image-borders';
 			printf( __('If you liked this plugin, please take <a href="%s">1 minute to leave a review</a>.', 'bs-wib'), $link ); ?>
         </p>
+		<a target="_blank" href="https://www.competethemes.com/themes/?utm_source=wp-image-borders&utm_medium=plugin&utm_content=banner-image&utm_campaign=wp-image-borders">
+			<img style="margin-top: 48px;" width="800" height="400" src="<?php echo BS_WIB_PRO_URL . 'images/theme-ad.png'; ?>"
+		</a>
     </div><?php 
 }
 ?>

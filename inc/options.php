@@ -151,7 +151,7 @@ function bs_wib_classes_display() {
 	$options = get_option( 'wp_image_borders_options' );
 	$html = "<input type='text' id='bs_wib_classes' name='wp_image_borders_options[bs_wib_classes]' value='{$options['bs_wib_classes']}' />";
 	$html .= '<span style="margin-left: 12px;"><em>.class-1, .class-2, .another-class</em></span>';
-	$html .= '<p style="margin-top: 12px;">' . __("Classes should be on the img element.", "bs-wib") . '</p>';
+	$html .= '<p style="margin-top: 12px;">' . __("Classes should be added to the img element.", "bs-wib") . '</p>';
 	echo $html;
 }
 
