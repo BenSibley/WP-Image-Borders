@@ -50,8 +50,11 @@ if ( ! defined( 'BS_WIB_PRO_BASENAME' ) ) {
 	define( 'BS_WIB_PRO_BASENAME', plugin_basename( BS_WIB_PRO_FILE ) );
 }
 
-// require colors (needs to be before customizer.php)
+// require options
 require_once( BS_WIB_PRO_PATH . 'inc/options.php' );
+
+// require output
+require_once( BS_WIB_PRO_PATH . 'inc/output.php' );
 
 // Add settings link on plugin page
 function bs_wib_settings_link($links) {
