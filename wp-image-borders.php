@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Image Borders
-Version: 1.5.3
+Version: 2.0
 Description: WP Image Borders makes it easy to add or remove image borders from pictures in your blog posts.
 Author: Compete Themes
 Author URI: https://www.competethemes.com
