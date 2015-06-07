@@ -65,6 +65,7 @@ Border radius is the level of curvature of the image's border.  A higher border 
 * internationalized
 * minor style & copy updates to settings page
 * codebase refactored and reorganized
+* added additional sanitization and now preventing direct access to php files
 
 = 1.5.3 =
 * Fixed CSS 404 error
