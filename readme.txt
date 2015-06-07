@@ -2,8 +2,8 @@
 Contributors: BenSibley
 Tags: posts, post, images, image, blog, photo, photos, picture, pictures, remove image borders, add image borders, change image border styles
 Requires at least: 3.0.1
-Tested up to: 3.8.2
-Stable tag: 1.5.3
+Tested up to: 4.2.2
+Stable tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,10 +15,10 @@ WP Image Borders makes it easy to:
 
 * automatically add borders around images in posts
 * selectively add borders around images in any part of your site
-* Change image border styles
-* Change image border colors
-* Change image border width
-* and add shadows to images in your posts
+* change image border styles
+* change image border colors
+* change image border width
+* add shadows to images in your posts
 
 To add borders around images in your posts, simply check the checkbox in the settings titled "Add borders to all images in blog posts." This will automatically add the borders you've created to all images in your blog posts.
 
@@ -58,6 +58,13 @@ Border radius is the level of curvature of the image's border.  A higher border 
 2. This is an example of an image modified with WP Image Borders.  It's been given a white border and box shadow.
 
 == Changelog ==
+
+= 2.0 =
+* improved image targeting
+* simplified how custom css classes are handled
+* internationalized
+* minor style & copy updates to settings page
+* codebase refactored and reorganized
 
 = 1.5.3 =
 * Fixed CSS 404 error
