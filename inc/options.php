@@ -197,7 +197,7 @@ add_action( 'admin_enqueue_scripts', 'mw_enqueue_color_picker' );
 function mw_enqueue_color_picker( $hook_suffix ) {
 	// first check that $hook_suffix is appropriate for your admin page
 	wp_enqueue_style( 'wp-color-picker' );
-	wp_enqueue_script( 'color-picker', plugins_url('js/color-picker.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+	wp_enqueue_script( 'color-picker', BS_WIB_PRO_URL . 'js/color-picker.js', array( 'wp-color-picker' ), false, true );
 }
 
 // Adds the color picker field/form
