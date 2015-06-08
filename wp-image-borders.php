@@ -50,10 +50,10 @@ if ( ! defined( 'BS_WIB_PRO_BASENAME' ) ) {
 	define( 'BS_WIB_PRO_BASENAME', plugin_basename( BS_WIB_PRO_FILE ) );
 }
 
-// require options
+// require options file
 require_once( BS_WIB_PRO_PATH . 'inc/options.php' );
 
-// require output
+// require output file
 require_once( BS_WIB_PRO_PATH . 'inc/output.php' );
 
 // Add settings link on plugin page

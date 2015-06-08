@@ -35,7 +35,7 @@ function bs_wib_output_styles() {
 		$css .= $options['bs_wib_classes'] . ',';
 	}
 
-	wp_enqueue_style( 'wp-image-borders-styles', plugins_url( 'wp-image-borders.css' , __FILE__ ) );
+	wp_enqueue_style( 'wp-image-borders-styles', BS_WIB_PRO_URL . 'wp-image-borders.css' );
 
 	// add all the selectors need to precisely select all images
 	$css .= '
